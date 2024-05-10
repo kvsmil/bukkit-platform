@@ -17,7 +17,7 @@ public abstract class BukkitPlatform extends JavaPlugin {
 
     public abstract void startup(@NonNull BukkitPlatformManager platformManager);
     public abstract void shutdown(@NonNull BukkitPlatformManager platformManager);
-    public abstract OkaeriSerdesPack serdesPack();
+    public abstract OkaeriSerdesPack getSerdesPack();
 
     @Override
     public void onEnable() {

@@ -58,7 +58,7 @@ public final class BukkitPlatformManager {
            config.withConfigurer(new YamlBukkitConfigurer(), new SerdesBukkit());
            config.withBindFile(new File(this.platform.getDataFolder(), dataFile));
            config.withRemoveOrphans(path.removeOrphans());
-           config.withSerdesPack(this.platform.serdesPack());
+           config.withSerdesPack(this.platform.getSerdesPack());
            config.saveDefaults();
            config.load(true);
         });

@@ -40,7 +40,7 @@ public class BukkitTemplatePlugin extends BukkitPlatform {
     }
 
     @Override
-    public OkaeriSerdesPack serdesPack() {
+    public OkaeriSerdesPack getSerdesPack() {
         return registry -> {
 
         };
