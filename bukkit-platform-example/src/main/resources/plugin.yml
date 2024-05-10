@@ -1,0 +1,4 @@
+name: bukkit-template
+main: github.kvsmil.bukkitplatform.BukkitTemplatePlugin
+version: 1.0
+api-version: 1.13
