@@ -11,7 +11,6 @@ import github.kvsmil.bukkitplatform.annotation.ConfigurationPath;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import org.bukkit.event.Listener;
 
 import java.io.File;
 import java.util.function.Consumer;

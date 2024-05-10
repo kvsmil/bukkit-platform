@@ -9,8 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/bukkit-core" />
-            <option value="$PROJECT_DIR$/bukkit-example" />
+            <option value="$PROJECT_DIR$/bukkit-platform-core" />
+            <option value="$PROJECT_DIR$/bukkit-platform-example" />
             <option value="$PROJECT_DIR$/bukkit-utilities" />
           </set>
         </option>
