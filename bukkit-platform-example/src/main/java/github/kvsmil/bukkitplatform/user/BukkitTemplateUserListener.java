@@ -1,6 +1,7 @@
 package github.kvsmil.bukkitplatform.user;
 
 import eu.okaeri.injector.annotation.Inject;
+import eu.okaeri.persistence.document.Document;
 import github.kvsmil.bukkitplatform.BukkitTemplatePlugin;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.entity.Player;
@@ -20,13 +21,9 @@ public final class BukkitTemplateUserListener implements Listener {
     void handle(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
-        this.plugin.getLogger().info("ssss");
-
         // async user saving
-        CompletableFuture.runAsync(() -> {
-            BukkitTemplateUser user = this.repository.findOrCreate(player.getUniqueId(), player.getName());
-            user.save();
-        });
+        CompletableFuture.supplyAsync(() -> this.repository.findOrCreate(player.getUniqueId(), player.getName()))
+                .thenAcceptAsync(Document::save);
 
     }
 

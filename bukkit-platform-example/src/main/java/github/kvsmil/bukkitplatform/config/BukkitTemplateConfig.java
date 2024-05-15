@@ -4,7 +4,8 @@ import eu.okaeri.configs.OkaeriConfig;
 import eu.okaeri.configs.annotation.Comment;
 import github.kvsmil.bukkitplatform.annotation.ConfigurationPath;
 
-@ConfigurationPath(path = "config.yml", removeOrphans = true)
+/* refactored "path" to "file" in configuration path. */
+@ConfigurationPath(file = "config.yml", removeOrphans = true)
 public final class BukkitTemplateConfig extends OkaeriConfig {
 
     @Comment("Wysylac dodatkowe informacje do konsoli?")

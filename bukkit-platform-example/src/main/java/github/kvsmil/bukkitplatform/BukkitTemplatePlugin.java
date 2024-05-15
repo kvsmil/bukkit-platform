@@ -12,6 +12,8 @@ import github.kvsmil.bukkitplatform.user.BukkitTemplateUserListener;
 import github.kvsmil.bukkitplatform.user.BukkitTemplateUserRepository;
 import lombok.NonNull;
 
+import java.time.Duration;
+
 public class BukkitTemplatePlugin extends BukkitPlatform {
 
     @Override
@@ -32,6 +34,9 @@ public class BukkitTemplatePlugin extends BukkitPlatform {
 
                 platformManager.registerComponent(userRepository);
                 bukkitPersistence.registerCollection(documentPersistence, userCollection);
+
+                // example scheduler use
+                this.runLater(() -> this.getLogger().info("Loaded!"), Duration.ofSeconds(5));
             });
 
         });

@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/bukkit-platform-core" />
             <option value="$PROJECT_DIR$/bukkit-platform-example" />
             <option value="$PROJECT_DIR$/bukkit-utilities" />
+            <option value="$PROJECT_DIR$/bukkit-wallet" />
           </set>
         </option>
       </GradleProjectSettings>

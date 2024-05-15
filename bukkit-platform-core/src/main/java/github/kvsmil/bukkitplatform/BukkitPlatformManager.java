@@ -28,9 +28,7 @@ public final class BukkitPlatformManager {
     public <T> void registerComponent(@NonNull T type) {
         injector.registerInjectable(type);
 
-        boolean isConfiguration = type.getClass().getAnnotation(ConfigurationPath.class) != null;
-
-        if(isConfiguration) {
+        if(type.getClass().getAnnotation(ConfigurationPath.class) != null) {
             this.registerConfiguration((OkaeriConfig) type);
         }
 
@@ -51,7 +49,7 @@ public final class BukkitPlatformManager {
     private <T extends OkaeriConfig> void registerConfiguration(@NonNull T type) {
 
         ConfigurationPath path = type.getClass().getAnnotation(ConfigurationPath.class);
-        String dataFile = path.path();
+        String dataFile = path.file();
 
         ConfigManager.create(type.getClass(), config -> {
            config.withConfigurer(new YamlBukkitConfigurer(), new SerdesBukkit());

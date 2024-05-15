@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 public @interface ConfigurationPath {
-    String path();
+    String file();
     boolean removeOrphans() default false;
 
 }
